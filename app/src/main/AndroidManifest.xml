@@ -19,7 +19,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ShortTermVisualMemory"></activity>
+        <activity android:name=".ShortTermVisualMemory" />
+        <activity android:name=".NumberFlash"></activity>
     </application>
 
 </manifest>

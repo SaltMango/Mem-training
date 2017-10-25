@@ -12,26 +12,70 @@
     <android.support.v7.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:background="#66bb6a"
         app:cardBackgroundColor="#a7ffeb"
         app:cardUseCompatPadding="true"
         app:cardCornerRadius="15dp"
-        android:layout_weight="1"
+        android:layout_weight="2"
        >
+<LinearLayout
+    android:layout_margin="10dp"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
 
         <TextView
+            android:id="@+id/accuS"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="wrap_content"
+            android:text="Accuracy in S:"
+            android:textSize="19sp"
+            />
+        <TextView
+            android:id="@+id/accuT"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Accuracy in T:"
+            android:textSize="19sp"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Accuracy in U:"
+            android:id="@+id/accuU"
+            android:textSize="19sp"
+            />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Accuracy in X:"
+        android:textSize="19sp"
+        android:id="@+id/accuX"
+        />
+    <TextView
+        android:id="@+id/accuL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Accuracy in L"
+        android:textSize="19sp"
+        />
+    <TextView
+        android:id="@+id/accuTotal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Total accuracy: 0%"
+        android:textSize="19sp"
+        />
+</LinearLayout>
     </android.support.v7.widget.CardView>
 
     <android.support.v7.widget.CardView
         android:id="@+id/cardView"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="2"
+        android:layout_weight="3"
         app:cardCornerRadius="15dp"
-        android:background="#4db6ac"
-        app:cardBackgroundColor="#ea80fc"
+        app:cardBackgroundColor="#a7ffeb"
         app:cardUseCompatPadding="true"
 >
 <LinearLayout
@@ -60,7 +104,9 @@
         android:layout_marginRight="50dp"
         android:gravity="center"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+
+        />
 </LinearLayout>
 
 
@@ -68,32 +114,56 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <RadioButton
+                android:onClick="onRadioButtonClicked"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="S (novice)"
                 android:textSize="19sp"
+                android:id="@+id/symbol_S_id"
                 />
             <RadioButton
+                android:onClick="onRadioButtonClicked"
+                android:id="@+id/symbol_ST_id"
                 android:text="S/T (novice)"
                 android:textSize="19sp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
             <RadioButton
+                android:onClick="onRadioButtonClicked"
+
+                android:id="@+id/symbol_STU_id"
                 android:text="S/T/U (intermediate)"
                 android:textSize="19sp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
             <RadioButton
+                android:onClick="onRadioButtonClicked"
+
+                android:id="@+id/symbol_STUX_id"
                 android:text="S/T/U/X (expert)"
                 android:textSize="19sp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
             <RadioButton
+                android:onClick="onRadioButtonClicked"
+
+                android:id="@+id/symbol_STUXL_id"
                 android:text="S/T/U/X/L (expert)"
                 android:textSize="19sp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
         </RadioGroup>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="30dp"
+        android:layout_gravity="center"
+        android:text="Flash"
+        android:clickable="true"
+        android:onClick="playGame"
+        android:id="@+id/flashID"
+        />
 
 </LinearLayout>
 
